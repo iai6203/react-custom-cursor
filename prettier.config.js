@@ -6,22 +6,23 @@
  */
 const config = {
   tabWidth: 2,
-  trailingComma: "all",
+  trailingComma: 'all',
   semi: false,
   singleQuote: true,
 
   importOrder: [
-    "^@core/(.*)$",
-    "^@server/(.*)$",
-    "^@ui/(.*)$",
-    "^[./]"
+    '^@app/(.*)$',
+    '^@pages/(.*)$',
+    '^@components/(.*)$',
+    '^@styles/(.*)$',
+    '^[./]',
   ],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
 
   plugins: [
-    require.resolve("@trivago/prettier-plugin-sort-imports"),
-    require.resolve("prettier-plugin-tailwindcss"),
+    require.resolve('@trivago/prettier-plugin-sort-imports'),
+    require.resolve('prettier-plugin-tailwindcss'),
   ],
 }
 

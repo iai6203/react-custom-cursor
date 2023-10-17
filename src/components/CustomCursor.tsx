@@ -1,13 +1,14 @@
 /** @jsxImportSource @emotion/react */
-import useMouse from '@react-hook/mouse-position'
-import { motion } from 'framer-motion'
-import React, { useRef } from 'react'
-import tw from 'twin.macro'
+import useMouse from '@react-hook/mouse-position';
+import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import tw from 'twin.macro';
+
 
 const CustomCursor = () => {
   const body = window.document.body
   const target = useRef(body)
-  const { x, y } = useMouse(target, {
+  const {x, y} = useMouse(target, {
     enterDelay: 0,
     leaveDelay: 500,
   })

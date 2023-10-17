@@ -1,11 +1,12 @@
 import React from 'react'
+import { RouterProvider } from 'react-router-dom'
 
-import CustomCursor from '@components/CustomCursor'
+import { router } from '@app/router'
 
 function App() {
   return (
     <>
-      <CustomCursor />
+      <RouterProvider router={router} />
     </>
   )
 }

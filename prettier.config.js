@@ -12,6 +12,7 @@ const config = {
 
   importOrder: [
     '^@app/(.*)$',
+    '^@layouts/(.*)$',
     '^@pages/(.*)$',
     '^@components/(.*)$',
     '^@styles/(.*)$',
@@ -19,6 +20,9 @@ const config = {
   ],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
+
+  tailwindFunctions: ['tw'],
+  tailwindAttributes: ['tw'],
 
   plugins: [
     require.resolve('@trivago/prettier-plugin-sort-imports'),

@@ -8,10 +8,13 @@ const customStyles = css({
     ...tw`h-full`,
   },
   body: {
-    ...tw`font-pretendard h-full overflow-hidden antialiased`,
+    ...tw`h-full cursor-none overflow-hidden font-pretendard antialiased`,
   },
   'div#root': {
     ...tw`h-full`,
+  },
+  a: {
+    ...tw`cursor-none`,
   },
 })
 

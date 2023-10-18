@@ -3,6 +3,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import tw from 'twin.macro'
 
+import { useCustomCursorStore } from '@hooks/useCustomCursorStore'
+
 // Types
 
 type ILink = {
@@ -188,6 +190,22 @@ const HamburgerSVG = () => {
 
 // Components
 
+const LinkItem = ({ label, href }: ILink) => {
+  const setCustomCursorStatus = useCustomCursorStore((state) => state.setStatus)
+
+  return (
+    <li>
+      <Link
+        to={href}
+        className="text-inherit transition hover:text-black"
+        onMouseEnter={() => setCustomCursorStatus('highlight')}
+        onMouseLeave={() => setCustomCursorStatus('navbar')}
+      >
+        {label}
+      </Link>
+    </li>
+  )
+}
 const Links = () => {
   const links = React.useRef<ILink[]>([
     { label: 'About', href: '#' },
@@ -201,19 +219,12 @@ const Links = () => {
     <>
       <ul
         css={[
-          tw`hidden gap-x-100pxr text-18pxr font-bold text-black hover:text-black/60`,
+          tw`hidden gap-x-[100px] text-[18px] font-bold text-black hover:text-black/60`,
           tw`desktop:(flex)`,
         ]}
       >
-        {links.current.map(({ label, href }, i) => (
-          <li key={i}>
-            <Link
-              to={href}
-              className="text-inherit transition hover:text-black"
-            >
-              {label}
-            </Link>
-          </li>
+        {links.current.map((props, i) => (
+          <LinkItem key={i} {...props} />
         ))}
       </ul>
     </>
@@ -223,14 +234,18 @@ const Links = () => {
 //
 
 const Navbar = () => {
+  const setCustomCursorStatus = useCustomCursorStore((state) => state.setStatus)
+
   return (
     <header
       css={[
-        tw`fixed left-0 right-0 top-0 z-40 mx-auto mt-30pxr flex max-w-[374px] items-center justify-between rounded-[10px] bg-white px-30pxr py-25pxr`,
-        tw`pad:(max-w-[690px] px-60pxr)`,
+        tw`fixed left-0 right-0 top-0 z-40 mx-auto mt-[30px] flex max-w-[374px] items-center justify-between rounded-[10px] bg-white px-[30px] py-[25px]`,
+        tw`pad:(max-w-[690px] px-[60px])`,
         tw`desktop:(max-w-[1287px])`,
-        tw`wide:(px-60pxr max-w-[1800px])`,
+        tw`wide:(px-[60px] max-w-[1800px])`,
       ]}
+      onMouseEnter={() => setCustomCursorStatus('navbar')}
+      onMouseLeave={() => setCustomCursorStatus('default')}
     >
       <Link to="/">
         <LogoSVG />

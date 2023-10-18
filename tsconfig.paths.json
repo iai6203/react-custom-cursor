@@ -8,6 +8,7 @@
       "@layouts/*": ["./layouts/*"],
       "@pages/*": ["./pages/*"],
       "@components/*": ["./components/*"],
+      "@hooks/*": ["./hooks/*"],
       "@styles/*": ["./styles/*"]
     }
   }

@@ -15,6 +15,7 @@ const config = {
     '^@layouts/(.*)$',
     '^@pages/(.*)$',
     '^@components/(.*)$',
+    '^@hooks/(.*)$',
     '^@styles/(.*)$',
     '^[./]',
   ],

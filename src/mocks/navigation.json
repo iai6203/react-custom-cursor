@@ -1,0 +1,166 @@
+[
+  {
+    "label": {
+      "ko": "회사소개",
+      "eng": "About"
+    },
+    "href": "#",
+    "children": [
+      {
+        "label": {
+          "ko": "수상/인증/언론보도",
+          "eng": ""
+        },
+        "href": "#"
+      },
+      {
+        "label": {
+          "ko": "연혁",
+          "eng": ""
+        },
+        "href": "#"
+      },
+      {
+        "label": {
+          "ko": "주요협력기관",
+          "eng": ""
+        },
+        "href": "#"
+      },
+      {
+        "label": {
+          "ko": "찾아오시는길",
+          "eng": ""
+        },
+        "href": "#"
+      }
+    ]
+  },
+  {
+    "label": {
+      "ko": "사업소개",
+      "eng": "Business"
+    },
+    "href": "#",
+    "children": [
+      {
+        "label": {
+          "ko": "AI모델링",
+          "eng": ""
+        },
+        "href": "#"
+      },
+      {
+        "label": {
+          "ko": "AI학습데이터",
+          "eng": ""
+        },
+        "href": "#"
+      },
+      {
+        "label": {
+          "ko": "빅데이터",
+          "eng": ""
+        },
+        "href": "#"
+      },
+      {
+        "label": {
+          "ko": "IT서비스사업",
+          "eng": ""
+        },
+        "href": "#"
+      },
+      {
+        "label": {
+          "ko": "교육사업",
+          "eng": ""
+        },
+        "href": "#"
+      }
+    ]
+  },
+  {
+    "label": {
+      "ko": "제품소개",
+      "eng": "Product"
+    },
+    "href": "#",
+    "children": [
+      {
+        "label": {
+          "ko": "라임넷",
+          "eng": ""
+        },
+        "href": "#"
+      },
+      {
+        "label": {
+          "ko": "라벨온",
+          "eng": ""
+        },
+        "href": "#"
+      },
+      {
+        "label": {
+          "ko": "라임디큐엠",
+          "eng": ""
+        },
+        "href": "#"
+      },
+      {
+        "label": {
+          "ko": "라임에듀",
+          "eng": ""
+        },
+        "href": "#"
+      },
+      {
+        "label": {
+          "ko": "CCTV행동인식",
+          "eng": ""
+        },
+        "href": "#"
+      }
+    ]
+  },
+  {
+    "label": {
+      "ko": "연구",
+      "eng": "Research"
+    },
+    "href": "#",
+    "children": [
+      {
+        "label": {
+          "ko": "연구분야",
+          "eng": ""
+        },
+        "href": "#"
+      }
+    ]
+  },
+  {
+    "label": {
+      "ko": "커뮤니티",
+      "eng": "Community"
+    },
+    "href": "#",
+    "children": [
+      {
+        "label": {
+          "ko": "페이스북",
+          "eng": ""
+        },
+        "href": "#"
+      },
+      {
+        "label": {
+          "ko": "블로그",
+          "eng": ""
+        },
+        "href": "#"
+      }
+    ]
+  }
+]

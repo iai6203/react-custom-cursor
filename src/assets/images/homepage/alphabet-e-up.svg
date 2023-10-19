@@ -1,0 +1,23 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="660.098"
+  height="331.348"
+>
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.921" y1="0.368" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#320f91"/>
+      <stop offset="1" stop-color="#13075b"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect width="660.098" height="331.348" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g transform="translate(0 0)">
+    <g transform="translate(0 0)" clip-path="url(#clip-path)">
+      <path
+        d="M642.955,218.463C596.786,91.045,474.7,0,331.347,0,148.348,0,0,148.35,0,331.349H188.7a142.664,142.664,0,0,1,277.275-47.255L338.55,331.349l134.387-17.4L660.1,289.723a329.265,329.265,0,0,0-17.143-71.261"
+        transform="translate(0 0)" fill="url(#linear-gradient)"
+      />
+    </g>
+  </g>
+</svg>

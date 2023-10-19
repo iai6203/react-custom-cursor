@@ -1,0 +1,26 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="2096"
+  height="2096"
+>
+  <defs>
+    <radialGradient
+      id="radial-gradient"
+      cx="0.5"
+      cy="0.5"
+      r="0.5"
+      gradientUnits="objectBoundingBox"
+    >
+      <stop offset="0" stop-color="#003bff"/>
+      <stop offset="1" stop-color="#28cbfc" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle
+    cx="898"
+    cy="898"
+    r="898"
+    transform="translate(150 150)"
+    opacity="0.5"
+    fill="url(#radial-gradient)"
+  />
+</svg>

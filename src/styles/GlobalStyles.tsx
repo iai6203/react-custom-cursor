@@ -6,7 +6,7 @@ import tw, { GlobalStyles as BaseStyles } from 'twin.macro'
 
 const CustomStyles = createGlobalStyle({
   body: {
-    ...tw`font-pretendard bg-black text-white antialiased`,
+    ...tw`bg-black font-pretendard text-white antialiased scrollbar-hide`,
   },
 })
 

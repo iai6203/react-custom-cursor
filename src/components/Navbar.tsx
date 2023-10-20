@@ -35,7 +35,7 @@ const Navbar = () => {
       <motion.header
         variants={variants}
         animate={direction === 'down' ? 'hidden' : 'show'}
-        className="fixed left-0 right-0 top-[30px] z-50 px-[20px]"
+        className="fixed left-0 right-0 top-[30px] z-40 px-[20px]"
       >
         <nav className="mx-auto flex max-w-[374px] items-center justify-between rounded-[10px] bg-white px-[30px] py-[25px] pad:max-w-[690px] w1400:max-w-[1287px] w1920:max-w-[1800px]">
           <Image src={logoSVG} alt="Company logo" priority />

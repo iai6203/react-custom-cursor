@@ -17,7 +17,6 @@ const config = {
     '^@/mocks/(.*)$',
     '^@/assets/(.*)$',
     '^@/styles/(.*)$',
-    '^./(components)/(.*)$',
     '^@/types/(.*)$',
     '^[./]',
   ],

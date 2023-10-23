@@ -2,7 +2,6 @@
 
 import useMouse from '@react-hook/mouse-position'
 import { AnimatePresence, motion } from 'framer-motion'
-import dynamic from 'next/dynamic'
 import React from 'react'
 import tw from 'twin.macro'
 
@@ -65,8 +64,4 @@ const CustomCursor = () => {
   )
 }
 
-const CustomCursorCSR = dynamic(Promise.resolve(CustomCursor), {
-  ssr: false,
-})
-
-export default CustomCursorCSR
+export default CustomCursor

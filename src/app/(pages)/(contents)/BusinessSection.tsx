@@ -2,15 +2,9 @@
 
 import React from 'react'
 
-import { useCustomCursorStore } from '@/hooks/useCustomCursorStore'
-
 const Item = () => {
-  const setStatus = useCustomCursorStore((state) => state.setStatus)
-  const handleMouseEnter = () => setStatus('view')
-  const handleMouseLeave = () => setStatus('default')
-
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div>
       <div className="container mx-auto flex h-full max-w-none items-center bg-[#00108e] pb-[70px] pt-[120px]">
         <div>
           <h3 className="text-[46px] font-extrabold leading-[31px]">

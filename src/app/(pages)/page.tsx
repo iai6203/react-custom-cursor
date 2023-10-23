@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 
 import SmoothScroll from '@/components/SmoothScroll'
 
-import BusinessSection from './(contents)/BusinessSection'
+import prisma from '@/lib/prisma'
+
 import HeroSection from './(contents)/HeroSection'
 
 export const metadata: Metadata = {
@@ -10,13 +11,20 @@ export const metadata: Metadata = {
   description: '',
 }
 
-export default function Home() {
+const getUsers = async () => {
+  return prisma.user.findMany()
+}
+
+export default async function Home() {
+  const users = await getUsers()
+
+  console.log('users', { users })
+
   return (
     <>
       <SmoothScroll>
         <main>
           <HeroSection />
-          <BusinessSection />
         </main>
       </SmoothScroll>
     </>

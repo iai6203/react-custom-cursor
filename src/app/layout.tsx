@@ -1,11 +1,13 @@
-import StyledComponentsRegistry from '@/lib/registry'
 import type { Metadata } from 'next'
 import React from 'react'
+import { Toaster } from 'sonner'
 
 import CSR from '@/components/CSR'
 import CustomCursor from '@/components/CustomCursor'
 import Navbar from '@/components/Navbar'
-import SidebarNavigation from '@/components/SidebarNavigation'
+import SideNavbar from '@/components/SideNavbar'
+
+import StyledComponentsRegistry from '@/lib/registry'
 
 import GlobalStyles from '@/styles/GlobalStyles'
 import '@/styles/tailwind.css'
@@ -28,12 +30,15 @@ export default function RootLayout({
       <body>
         <StyledComponentsRegistry>
           <GlobalStyles />
+          <Toaster closeButton />
           <CSR>
             <CustomCursor />
           </CSR>
           <Navbar />
-          <SidebarNavigation />
+          <SideNavbar />
           {children}
+
+          <div id="portal" />
         </StyledComponentsRegistry>
       </body>
     </html>

@@ -6,7 +6,7 @@ import Link from 'next/link'
 import React from 'react'
 
 import { useScrollDirection } from '@/hooks/useScrollDirection'
-import { useSidebarNavigationStore } from '@/hooks/useSidebarNavigationStore'
+import { useSideNavbarStore } from '@/hooks/useSideNavbarStore'
 
 import mockNavigation from '@/mocks/navigation.json'
 
@@ -26,16 +26,16 @@ const variants = {
 
 const Navbar = () => {
   const { direction } = useScrollDirection()
-  const openSidebarNavigation = useSidebarNavigationStore(
-    (state) => state.openSidebarNavigation,
-  )
+  const { openNavbar } = useSideNavbarStore((state) => ({
+    openNavbar: state.openNavbar,
+  }))
 
   return (
     <>
       <motion.header
         variants={variants}
         animate={direction === 'down' ? 'hidden' : 'show'}
-        className="fixed left-0 right-0 top-[30px] z-40 px-[20px]"
+        className="fixed left-0 right-0 top-[30px] z-10 px-[20px]"
       >
         <nav className="mx-auto flex max-w-[374px] items-center justify-between rounded-[10px] bg-white px-[30px] py-[25px] pad:max-w-[690px] w1400:max-w-[1287px] w1920:max-w-[1800px]">
           <Image src={logoSVG} alt="Company logo" priority />
@@ -48,7 +48,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <button onClick={openSidebarNavigation}>
+          <button onClick={openNavbar}>
             <Image src={bars3SVG} alt="Hamburger menu button icon" priority />
           </button>
         </nav>

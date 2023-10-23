@@ -2,7 +2,7 @@ import StyledComponentsRegistry from '@/lib/registry'
 import type { Metadata } from 'next'
 import React from 'react'
 
-import CustomCursor from '@/components/CustomCursor'
+import CustomCursorCSR from '@/components/CustomCursor'
 import Navbar from '@/components/Navbar'
 import SidebarNavigation from '@/components/SidebarNavigation'
 
@@ -27,7 +27,7 @@ export default function RootLayout({
       <body>
         <StyledComponentsRegistry>
           <GlobalStyles />
-          <CustomCursor />
+          <CustomCursorCSR />
           <Navbar />
           <SidebarNavigation />
           {children}

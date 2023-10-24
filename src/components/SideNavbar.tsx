@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from 'framer-motion'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import CSR from '@/components/CSR'
+
 import { useSideNavbarStore } from '@/hooks/useSideNavbarStore'
 
 const SideNavbar = () => {
@@ -13,10 +15,7 @@ const SideNavbar = () => {
     closeNavbar: state.closeNavbar,
   }))
 
-  if (!element) {
-    console.error('#portal 요소를 찾을 수 없습니다.')
-    return null
-  }
+  if (!element) return null
 
   return ReactDOM.createPortal(
     <AnimatePresence>
@@ -50,4 +49,12 @@ const SideNavbar = () => {
   )
 }
 
-export default SideNavbar
+const SideNavbarContainer = () => {
+  return (
+    <CSR>
+      <SideNavbar />
+    </CSR>
+  )
+}
+
+export default SideNavbarContainer

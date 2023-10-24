@@ -17,7 +17,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto w1400:flex">
         <div className="w1400:flex-1">
-          <div className="pt-[140px] font-poppins text-[44px] font-bold leading-[49px] pad:pt-[170px] pad:text-[60px] pad:leading-[66px] w1400:pt-[250px] w1920:pt-[280px] w1920:text-[88px] w1920:leading-[96px]">
+          <div className="pt-[140px] font-poppins text-[36px] font-bold leading-[49px] pad:pt-[170px] pad:text-[60px] pad:leading-[66px] w1400:pt-[250px] w1920:pt-[280px] w1920:text-[88px] w1920:leading-[96px]">
             <h3>A Happy</h3>
             <h3>Virtual World for</h3>
             <h3>Everyone</h3>

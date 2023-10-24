@@ -6,6 +6,7 @@ import Link from 'next/link'
 import React from 'react'
 
 import { useScrollDirection } from '@/hooks/useScrollDirection'
+import useScrollPosition from '@/hooks/useScrollPosition'
 import { useSideNavbarStore } from '@/hooks/useSideNavbarStore'
 
 import mockNavigation from '@/mocks/navigation.json'
@@ -25,16 +26,22 @@ const variants = {
 }
 
 const Navbar = () => {
+  const { position } = useScrollPosition()
   const { direction } = useScrollDirection()
   const { openNavbar } = useSideNavbarStore((state) => ({
     openNavbar: state.openNavbar,
   }))
 
+  const show = React.useMemo(
+    () => position === 'top' || direction === 'up',
+    [position, direction],
+  )
+
   return (
     <>
       <motion.header
         variants={variants}
-        animate={direction === 'down' ? 'hidden' : 'show'}
+        animate={show ? 'show' : 'hidden'}
         className="fixed left-0 right-0 top-[30px] z-10 px-[20px]"
       >
         <nav className="mx-auto flex max-w-[374px] items-center justify-between rounded-[10px] bg-white px-[30px] py-[25px] pad:max-w-[690px] w1400:max-w-[1287px] w1920:max-w-[1800px]">

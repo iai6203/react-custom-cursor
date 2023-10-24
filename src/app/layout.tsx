@@ -2,8 +2,6 @@ import type { Metadata } from 'next'
 import React from 'react'
 import { Toaster } from 'sonner'
 
-import CSR from '@/components/CSR'
-import CustomCursor from '@/components/CustomCursor'
 import Navbar from '@/components/Navbar'
 import SideNavbar from '@/components/SideNavbar'
 
@@ -31,13 +29,9 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <GlobalStyles />
           <Toaster closeButton />
-          <CSR>
-            <CustomCursor />
-          </CSR>
           <Navbar />
           <SideNavbar />
           {children}
-
           <div id="portal" />
         </StyledComponentsRegistry>
       </body>

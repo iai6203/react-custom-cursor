@@ -5,8 +5,11 @@ import { createGlobalStyle } from 'styled-components'
 import tw, { GlobalStyles as BaseStyles } from 'twin.macro'
 
 const CustomStyles = createGlobalStyle({
+  html: {
+    ...tw`h-full w-full`,
+  },
   body: {
-    ...tw`bg-black font-pretendard text-white antialiased scrollbar-hide`,
+    ...tw`h-full w-full bg-black font-pretendard text-white antialiased scrollbar-hide`,
   },
 })
 

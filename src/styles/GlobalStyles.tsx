@@ -9,7 +9,7 @@ const CustomStyles = createGlobalStyle({
     ...tw`h-full w-full`,
   },
   body: {
-    ...tw`h-full w-full bg-black font-pretendard text-white antialiased scrollbar-hide`,
+    ...tw`h-full w-full bg-black font-pretendard text-white antialiased`,
   },
 })
 
